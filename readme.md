@@ -2,7 +2,7 @@
 Fetch a list of photos from Flickr.com and display it in html. View a [live demo](https://median-man.github.io/flickr-fetcher/).
 
 ## About
-I'm building this application as I follow the example project from James Sinclair's [*A Gentle Introduction to Javascript Test Driven Development*](https://jrsinclair.com/articles/2016/gentle-introduction-to-javascript-tdd-intro/). This application is being developed to deepen my understanding of TDD as it applies to Javascript run in a browser.
+I'm building this application as I follow the example project from James Sinclair's [*A Gentle Introduction to Javascript Test Driven Development*](https://jrsinclair.com/articles/2016/gentle-introduction-to-javascript-tdd-intro/) in order to deepen my understanding of TDD techniques for writing Javascript running in a web browser.
 
 ## Using flickr-fetcher
 `flickr-fetcher.js` provides a library of functions to wrap the Flickr API. This library is compatible with NodeJS and web browsers.
