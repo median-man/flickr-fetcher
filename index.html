@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Photo Lister Demo</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Photo Lister</h1>
+    <div class="row">
+      <div id='photoList'></div>
+    </div>
+  </div>
+  <a href="https://github.com/median-man/flickr-fetcher">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+      alt="Fork me on GitHub">
+  </a>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="flickr-fetcher.js"></script>
+  <script src="photo-lister.js"></script>
+  <script>
+    function addBootstrapClasses($photoList) {
+      $photoList.find('li').addClass('d-inline-block col-md-3')
+      $photoList.find('figure').addClass('figure');
+      $photoList.find('img').addClass('figure-img img-fluid rounded');
+      $photoList.find('figcaption').addClass('figure-caption');
+    }
+    
+    function renderPhotoList(photos) {
+      const htmlList = PhotoLister.photoListToHTML(photos);
+      const $photoList = PhotoLister.addPhotosToElement(htmlList, '#photoList', $);
+      addBootstrapClasses($photoList);
+    }
+    
+    const apiKey = '8060d4cdac3ceb86af470aae29af3a56';
+    FlickrFetcher.fetchPhotos(apiKey, $.getJSON).then(renderPhotoList);
+  </script>
+</body>
+
+</html>
