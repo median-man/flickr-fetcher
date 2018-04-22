@@ -1,0 +1,14 @@
+{
+  "name": "tdd-intro",
+  "version": "1.0.0",
+  "description": "Fetch some data from Flickr and add it to a web page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "moch --reporter=nyan"
+  },
+  "author": "John Desrosiers",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.1.1"
+  }
+}
