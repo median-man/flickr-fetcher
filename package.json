@@ -4,11 +4,12 @@
   "description": "Fetch some data from Flickr and add it to a web page.",
   "main": "index.js",
   "scripts": {
-    "test": "moch --reporter=nyan"
+    "test": "mocha --reporter=nyan *spec.js"
   },
   "author": "John Desrosiers",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.1.2",
     "mocha": "^5.1.1"
   }
 }
