@@ -13,7 +13,7 @@ I'm building this application as I follow the example project from James Sinclai
 const fetch = $.getJSON;
 
 // fakeFetcher returns a promise for an array of photoObj objects
-fetchPhotos(apiKey, fetch)
+FlickrFetcher.fetchPhotos(apiKey, fetch)
   .then(photos => photos.forEach(photoObj => renderPhoto(photoObj)));
 ```
 **photoObj** schema:
