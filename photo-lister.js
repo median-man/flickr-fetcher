@@ -16,4 +16,6 @@ const PhotoLister = (function createPhotoLister() {
   return { photoToLi, photoListToHTML, addPhotosToElement };
 })();
 
-module.exports = PhotoLister;
+if ((typeof module !== 'undefined') && (typeof module.exports !== 'undefined')) {
+  module.exports = PhotoLister;
+}
