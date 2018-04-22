@@ -24,7 +24,7 @@ fetchPhotos(apiKey, fetch)
 }
 ```
 
-## Using photo-lister (WIP)
+## Using photo-lister
 `photo-lister.js` may be used to render an array of `photoObj` to HTML.
 
 **Example Usage:**
