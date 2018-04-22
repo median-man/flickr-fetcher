@@ -60,5 +60,6 @@ Run `npm install` to install dependencies.
 Tests are run on the command line using Mocha. `npm test` will run all tests.
 
 ## Key Libraries
-[Mocha](https://mochajs.org/)
+[Mocha](https://mochajs.org/) Testing suite.
 [Chai Assertion Library](http://www.chaijs.com/)
+[Cheerio](https://cheerio.js.org/) Used to test HTML markup without a browser.

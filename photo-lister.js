@@ -9,7 +9,11 @@ const PhotoLister = (function createPhotoLister() {
     return `<ul>${photoObjList.map(photoToLi).join('')}</ul>`;
   }
 
-  return { photoToLi, photoListToHTML };
+  function addPhotosToElement(listHtml, selector, $) {
+    return $(selector).append(listHtml);
+  }
+
+  return { photoToLi, photoListToHTML, addPhotosToElement };
 })();
 
 module.exports = PhotoLister;
