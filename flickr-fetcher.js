@@ -3,4 +3,11 @@ function photoObjToURL(photoObj) {
     `${photoObj.id}_${photoObj.secret}_b.jpg`;
 }
 
-module.exports = { photoObjToURL };
+function transformPhotoObj(photoObj) {
+  return {
+    title: photoObj.title,
+    url: photoObjToURL(photoObj),
+  };
+}
+
+module.exports = { photoObjToURL, transformPhotoObj };
